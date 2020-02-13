@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.searchfiled{
+   margin-top:20px; 
+   margin-left: 15px;
+}
+
+.result{
+    width:600px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.result li {
+    display:block;
+    float:left;
+    margin:15px 15px;
+    list-style: none;
+}
+
+.result li img{
+   border:none;
+}
+

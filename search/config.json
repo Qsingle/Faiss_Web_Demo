@@ -1,0 +1,17 @@
+{
+    "db":{
+        "host":"127.0.0.1",
+        "port":27017,
+        "database":"eyedata",
+        "collection":"data"
+    },
+    "data_dir":"/data/eyedata/Training400/",
+    "map_dir":"data/",
+    "use_gpu":false,
+    "index": "basic.index",
+    "channel":3,
+    "layers":18,
+    "model": "./model.pth",
+    "size":224,
+    "k":10
+}

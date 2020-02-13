@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>小邱搜图</title> 
+        <meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}">
+    </head>
+    <body>
+        <div>
+            <form enctype="multipart/form-data" method="POST" action="" class="searchfiled">
+                {% csrf_token %}
+                <input type="file" name="pic" value="选择文件" required >
+                <input type="submit" name="submit" value="搜索">
+            </form>
+            <div class="result">
+                <ul>
+                    {% for img in images %}
+                    <li><img width=224 height=224 src="{% static '/' %}{{img}}" alt="{{img}}"></li>
+                       {% empty %}
+                       对不起,我现在找不到相似的图片，请小主等候我的更新哦。 
+                   {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

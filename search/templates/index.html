@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>小邱搜图</title> 
+        <meta content="text/html"; charset="UTF-8" http-equiv="content-type">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <div class="box">
+            <h1>小邱搜图</h1>
+            <div class="searchfiled">
+                <form method="POST" enctype="multipart/form-data" action="">
+                 {% csrf_token %}
+                 <input type="file" required accept="image/*" id="file" name="pic" value="选择文件">
+                 <button type="submit" id="sub" name="search">搜索</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
